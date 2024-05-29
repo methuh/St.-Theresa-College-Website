@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,23 +51,7 @@
      </div>
 
 
-     <form action="" class="search-form">
-        <input type="search" name="" placeholder="search here...." id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-     </form>
-
-     <form action="" class="login-form">
-        <h3>Login Form</h3>
-        <input type="email" placeholder="enter your email" class="box">
-        <input type="password" placeholder="enter your password" class="box">
-        <div class="flex">
-            <input type="checkbox" name="" id="remember-me">
-            <label for="remember-me">remember me</label>
-            <a href="#">forgot password?</a>
-        </div>
-        <input type="submit" value="login now" class="btn">
-        <p>don't have an account<a href="#">Create One!</a></p>
-     </form>
+    
     
 
 </header>
@@ -343,6 +328,42 @@ text-shadow: 0 0 5px #000;
 <script>
     lightGallery(document.querySelector('.projects .box-container____container'));
 </script>
-
+<script>
+    var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?64007';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+    "enabled":true,
+    "chatButtonSetting":{
+        "backgroundColor":"#00e785",
+        "ctaText":"Chat with us",
+        "borderRadius":"25",
+        "marginLeft": "0",
+        "marginRight": "20",
+        "marginBottom": "20",
+        "ctaIconWATI":false,
+        "position":"right"
+    },
+    "brandSetting":{
+        "brandName":"SBTTI",
+        "brandSubTitle":"undefined",
+        "brandImg":"https://www.wati.io/wp-content/uploads/2023/04/Wati-logo.svg",
+        "welcomeText":"Hi, we are glad that you have chosen us.",
+        "messageText":"Hello, %0A I have a question about your admission processes.",
+        "backgroundColor":"#00e785",
+        "ctaText":"Chat with us",
+        "borderRadius":"25",
+        "autoShow":false,
+        "phoneNumber":"254721812697"
+    }
+    };
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
 </body>
 </html>
