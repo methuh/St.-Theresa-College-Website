@@ -101,20 +101,18 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
     border-color: wheat;
-
-    &::-webkit-scrollbar{
+}
+ .html::-webkit-scrollbar{
         width:1rem;
-    }
+}
 
-    &::-webkit-scrollbar-track{
+.html::-webkit-scrollbar-track{
        background: transparent;
     }
 
-    &::-webkit-scrollbar-thumb{
+.html::-webkit-scrollbar-thumb{
         background: var(--yellow);
-    }
 }
-
 /*
 section{
     padding:5rem 10%;
@@ -152,11 +150,10 @@ section{
     border-radius: 25px;
     
 
-
-    &:hover{
+}
+ .button:hover{
         background: var(--yellow);
         color:var(--white);
-    }
 }
 
 .primary-button{
@@ -177,13 +174,12 @@ section{
    z-index: 1;
    overflow:hidden;
    transition:.4s;
-
-   &:hover{
+}
+.primary-button:hover{
     background-color: goldenrod;
     color: #000;
-   }
+ }
 
-}
 .primary-button::before{
     background: goldenrod;
     content:'';
@@ -226,22 +222,22 @@ section{
         background-image: url(../gallery/KTDA\ logo.png);
         background-position: center;
         background-size: cover;
-        font-size: 2.5rem;
-        font-weight: 900;
+        font-size: 2rem;
+        font-weight: 800;
         color: var(--black);
         text-transform: capitalize;
         letter-spacing: -2px;
-
-        span{
-            color:goldenrod;
-        }
 }
+.logo span{
+            color:goldenrod;
+}
+
 
 .navbar a{
           /*@include titleText(2rem);*/
 
-          font-size: 2rem;
-          font-weight: 700;
+          font-size: 1.72rem;
+          font-weight: 600;
           color: var(--white);
           text-transform: capitalize;
           margin:0 1rem;
@@ -261,10 +257,6 @@ section{
         color: var(--black);
         cursor:pointer;
         text-align: center;
-    
-    
-     
-
         margin-left: .3rem;
 }
 
@@ -292,14 +284,12 @@ section{
     padding:0 2rem;
     padding-top: 5rem;
     display:none;
-
-    &.active{
+}
+.contact-info .active{
         box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
         display:block;
-    }
-
-
 }
+
 #close-contact-info{
         position:absolute;
         top: 1rem;
@@ -308,10 +298,9 @@ section{
         font-size: 4rem;
         color:var(--black);
 
-
-        &:hover{
+}
+#close-contact-info:hover{
             transform:rotate(90deg);
-        }
 }
 
 .info{
@@ -328,13 +317,12 @@ section{
             cursor:pointer;
             text-align: center;
         
-        
-            &:hover{
+}    
+.info i:hover{
                 background: var(--black);
                 color: var(--white);
             }
 
-    }
 .info h3{
            font-size: 2rem;
            padding: 1rem 0; 
@@ -372,12 +360,12 @@ section{
             cursor:pointer;
             text-align: center;
         
-        
-            &:hover{
+}        
+.share a:hover{
                 background: var(--black);
                 color: var(--white);
-            }
- }
+}
+
 
    
 
@@ -495,22 +483,23 @@ section{
          width:7rem;
          line-height: 7rem;
          background:var(--white);
-
-         &:hover{
+}
+.swiper-button-next,
+.swiper-button-prev:hover{
             background: var(--yellow);
-         }
-    }
+ }
+ 
 
-    .swiper-button-next::after,
-    .swiper-button-prev::after{
+.swiper-button-next::after,
+.swiper-button-prev::after{
         font-size: 2rem;
         color:var(--black);
-    }
+}
 
 
-    .swiper-button-prev{
+.swiper-button-prev{
         right:7rem;
-    }
+}
 
 
 .text-content :where(h4,h3) span:first-child{
@@ -545,22 +534,20 @@ video,img{
           
 .about .content{
             flex:1 1 41rem;
-
-            h3{
+}
+.about .content h3{
                 font-size: 4rem;
                 color: var(--black);
                 text-transform: capitalize;
 
             }
 
-            p{
+.about .content p{
                 font-size: 1.5rem;
                 padding:1rem 0;
                 color: var(--light-color);
                 line-height: 1.5;
-            }
-        }
-
+}
 
 .about .box-container____container{
         margin-top: 3rem;
@@ -613,13 +600,11 @@ video,img{
             border:var(--border);
            
 
-
-            &:hover img{
+}
+.services .box-container____container .box:hover img{
                 transform: translateY(-1rem);
              
-            }
-        }
-
+}
 .services .box-container____container .box img{
                 height:20.5rem;
                 margin-bottom: .5rem;
@@ -834,23 +819,21 @@ video,img{
                 font-size: 5rem;
                 color: var(--black);
                 text-transform: capitalize;
-
-                span{
-                    font-size: 2rem;
-                }
-                
+}
+ .pricing .box-container____container .box .price span{
+                    font-size: 2rem; 
 }
 .pricing .box-container____container .box .list{
                 padding: 1rem 0;
-
-                p{
+}
+.pricing .box-container____container .box .list p{
                     padding: 1rem 0;
                     font-size: 1.4rem;
                     color: var(--light-color);
                 line-height: 1.5;
 
-                }
-}
+ }
+
 
 
 .contact{
@@ -889,13 +872,11 @@ video,img{
                 border-bottom: var(--border);
                 font-size: 1.6rem;
                 color:var(--light-color);
-
-                &:focus{
+}
+.contact .row form  .box:focus{
                     border-color: var(--yellow);
-                }
-            }
-
-.contact .row form textarea{
+  }
+ .contact .row form textarea{
                 height: 15rem;
                 resize: none;
 }
@@ -1123,16 +1104,14 @@ footer{
         padding:3rem 2rem;
     }
 
-    .header{
-        #menu-btn{
+.header #menu-btn{
             display:inline-block;
         }
-
-        #info-btn{
+.header #info-btn{
             display: inline-block;
         }
 
-        .navbar{
+ .header .navbar{
             position:absolute;
             top:99%;
             left:0;
@@ -1143,39 +1122,27 @@ footer{
             clip-path: polygon(0 0,100% 0,100% 0,0 0);
             transition:.2s linear;
 
-
-            &.active{
+ }
+.header .navbar.active{
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
 
 
-            a{
+ .header .navbar a{
                 display: block;
                 margin: 2rem;
                 color: var(--black);
-                &:hover{
+ }
+.header .navbar a:hover{
                     
                     box-shadow: 0 1rem 1rem rgba(0,0,0,0.3);
                 }
-            }
-        }
-    }
- 
 }
 
 
 @media (max-width:768px) {
     .container____container{
         width: var(--container____container-width-sm);
-    }
-
-    .header{
-        .search-form{
-            width:90%;
-        }
-        .login-form{
-            width:90%;
-        }
     }
 
     .home .slide{
@@ -1189,18 +1156,13 @@ footer{
         font-size: 1.4rem;
     }
 
-    .services{
-        .box-container____container{
-            .box{
-                img{
+    .services .box-container____container .box img{
                     width:100%;
                     height:fit-content;
-                }
-            }
-        }
+                
+        
     }
-
-    .footer__container{
+ .footer__container{
         display:grid;
         grid-template-columns: repeat(1,1fr);
         text-align: center;
