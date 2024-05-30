@@ -101,18 +101,19 @@ html{
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
     border-color: wheat;
-}
- .html::-webkit-scrollbar{
-        width:1rem;
-}
 
-.html::-webkit-scrollbar-track{
+ &::-webkit-scrollbar{
+        width:1rem;
+ }
+
+&::-webkit-scrollbar-track{
        background: transparent;
     }
 
-.html::-webkit-scrollbar-thumb{
+&::-webkit-scrollbar-thumb{
         background: var(--yellow);
 }
+ }
 /*
 section{
     padding:5rem 10%;
@@ -285,9 +286,11 @@ section{
     padding-top: 5rem;
     display:none;
 }
-.contact-info .active{
+.contact-info{
+     &.active{
         box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
         display:block;
+}
 }
 
 #close-contact-info{
