@@ -242,14 +242,12 @@ section{
     background: var(--yellow);
 }
 .logo{
-        
-        /*background-image: url(../gallery/newest\ brochure.jpg);*/
         background-position: center;
         background-size: cover;
-        font-size: 2.175rem;
+        font-size: 2.10rem;
         font-weight: 900;
         color: var(--black);
-        padding: 2.4px;
+        padding: 1.5px;
         text-transform: capitalize;
         letter-spacing: -2px;
 }
@@ -259,8 +257,6 @@ section{
 
 
 .navbar a{
-          /*@include titleText(2rem);*/
-
           font-size: 1.875rem;
           font-weight: 700;
           color: var(--white);
