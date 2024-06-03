@@ -246,11 +246,10 @@ section{
         /*background-image: url(../gallery/newest\ brochure.jpg);*/
         background-position: center;
         background-size: cover;
-        font-size: 2.275rem;
-        background-color: #fff;
+        font-size: 2.175rem;
         font-weight: 900;
         color: var(--black);
-        padding: 3.875px;
+        padding: 2.4px;
         text-transform: capitalize;
         letter-spacing: -2px;
 }
