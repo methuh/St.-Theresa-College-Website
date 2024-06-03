@@ -137,6 +137,29 @@ section{
 }
 
 
+/*page button*/
+.page-btn{
+    margin-top: 1.75rem;
+    margin-left: -50%;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color:#ffffff;
+    text-transform: uppercase;
+    border: 2px solid #032B56;
+    background: #1099d8;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.page-btn.active,
+.page-btn:hover{
+    background: transparent;
+    color: var(--cl--1--);
+}
+
+
+/*page button ends*/
 .btn{
     display:inline-block;
     margin-top: 1rem;
@@ -152,7 +175,7 @@ section{
     
 
 }
- .button:hover{
+ .button .btn:hover{
         background: var(--yellow);
         color:var(--white);
 }
@@ -219,13 +242,15 @@ section{
     background: var(--yellow);
 }
 .logo{
-        /*@include titleText(2.5rem);*/
-        background-image: url(../gallery/KTDA\ logo.png);
+        
+        /*background-image: url(../gallery/newest\ brochure.jpg);*/
         background-position: center;
         background-size: cover;
-        font-size: 2rem;
-        font-weight: 800;
+        font-size: 2.275rem;
+        background-color: #fff;
+        font-weight: 900;
         color: var(--black);
+        padding: 3.875px;
         text-transform: capitalize;
         letter-spacing: -2px;
 }
@@ -237,8 +262,8 @@ section{
 .navbar a{
           /*@include titleText(2rem);*/
 
-          font-size: 1.72rem;
-          font-weight: 600;
+          font-size: 1.875rem;
+          font-weight: 700;
           color: var(--white);
           text-transform: capitalize;
           margin:0 1rem;
@@ -388,6 +413,7 @@ section{
         position: relative;
         background-size: cover !important;
         background-position: center !important;
+        justify-content: center;
 
 
  }  
@@ -403,7 +429,7 @@ section{
 .home .slide.content{
             width: 100%;
             position:relative;
-            justify-content: flex-end;
+            justify-content: center;
             padding: 0 0 10% 10%;
             z-index: 1;
  }
@@ -531,7 +557,7 @@ section{
            flex: 1 1 41rem;
  }
 
-video,img{
+video,img,iframe{
             width:100%;
 }
           
@@ -720,6 +746,140 @@ video,img{
 {
     opacity: 1;
 }
+
+
+
+/*experience*/
+
+.containery{
+    max-width: 90%;
+    margin: 0 auto;
+}
+.experience{
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    padding: 4em 0;
+}
+
+.experience-cards{
+    flex-direction: column;
+    gap: 4em;
+}
+
+.rowzie{
+    display: flex;
+}
+
+.flexi{
+ flex-wrap: wrap;
+ gap: clamp(2em,5vw,5em);   
+}
+
+.flexi>*{
+    flex: 1 1 25em;
+}
+ 
+.e-card{
+    position: relative;
+    border: 1px solid rgba(41,71,160,0.1);
+    background: #ffffff;
+    padding: 2em;
+    box-shadow: 0 20px 24px -4px rgba(17,24,39,0.1),0 8px 8px -4px rgba(17,24,39,0.4);
+    min-width: 300px;
+    max-width: max-content;
+    border-radius: 7px;
+}
+
+.e-card:nth-of-type(odd){
+    margin-left: auto;
+}
+
+.e-card::after{
+    content: '';
+    position: absolute;
+    top: -50px;
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.e-card:nth-of-type(odd)::after{
+    right: 0;
+}
+
+.e-card:nth-of-type(even)::after{
+    left: 0;
+}
+
+.e-card h1{
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0;
+}
+.e-card p{
+    position: absolute;
+    padding-left: 1em;
+    font-size: 1.12rem;
+}
+
+.e-card p::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: goldenrod;
+}
+
+.experience-content h1{
+    color: goldenrod;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0;
+    font-size: 3rem;
+}
+
+.experience-content p{
+    padding: 2em 0;
+}
+
+
+/*experience ends*/
+
+
+/*subscribe*/
+.subscribe{
+    padding:10em 0;
+    margin: 0 auto;
+ }
+
+ .subscribe-content{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+ }
+
+ .subscribe-content h2{
+    color: goldenrod;
+    font-size: 2.65rem;
+    font-weight: 800;
+ }
+
+ .subscribe-content p a{
+    color: var(--cl--1--);
+    text-decoration: underline;
+ }
+/*subscribe ends*/
+
+
+
+
+
 
 
 
@@ -1085,7 +1245,11 @@ footer{
     }
    }
 
-
+@media screen and (min-width:577px) {
+    .desktop-hide{
+       display: none;
+    }
+}
 
 @media (max-width:991px) {
     html{
@@ -1178,6 +1342,28 @@ footer{
         justify-content: center;
     }
 
+}
+
+@media screen and(max-width:900px) {
+    
+    .experience-cards{
+        gap: unset;
+    }
+
+    .e-card{
+     margin-top: -2em;
+    }
+    .e-card:nth-of-type(odd)::after{
+        right: -30px;
+    }
+
+    .e-card:nth-of-type(even)::after{
+        left: -30px;
+    }
+    .subscribe-content{
+        justify-content: space-between;
+        text-align: unset;
+    }
 }
 
 @media screen and (max-width:1700px){
